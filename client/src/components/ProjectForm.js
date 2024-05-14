@@ -11,6 +11,7 @@ import {
   FormControl,
   FormControlLabel,
   RadioGroup,
+  CircularProgress,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
@@ -266,7 +267,7 @@ export default function ProjectForm({
           <Grid container justifyContent="space-evenly" sx={{ my: 3 }}>
             <Grid item xs="auto">
               <StyledButton
-                type="submit"
+                 type="submit"
                 form="project-form"
                 variant={!isEdit ? 'secondary' : !editMode ? 'contained' : 'secondary'}
                 cursor="pointer"

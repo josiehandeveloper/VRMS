@@ -83,40 +83,6 @@ const NewUserForm = (props) => {
               );
             })}
 
-          {props.questions.length !== 0 &&
-            props.questions.map((question) => {
-              return (
-                question.type === "select" && (
-                  <div key={question._id} className="form-row last-row">
-                    <div className="form-input-radio">
-                      <label htmlFor={question.htmlName}>
-                        Is this your first time attending a Hack Night?
-                      </label>
-                      <div className="radio-buttons first-time-select">
-                        <input
-                          id="radio1"
-                          type="radio"
-                          name={question.htmlName}
-                          value={true}
-                          onChange={props.handleNewMemberChange}
-                          defaultChecked
-                          required
-                        />
-                        <label htmlFor="radio1">Yes</label>
-                        <input
-                          id="radio2"
-                          type="radio"
-                          name={question.htmlName}
-                          value={false}
-                          onChange={props.handleNewMemberChange}
-                        />
-                        <label htmlFor="radio2">No</label>
-                      </div>
-                    </div>
-                  </div>
-                )
-              );
-            })}
 
           {props.newMember === true
             ? null
